@@ -124,3 +124,31 @@ h1 {
     letter-spacing: 2px;
     color: #bdb6a8;
 }
+/* ---------- LIGHTS ON ---------- */
+
+.museum-content {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+body.lights-on {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #403b2f 0%,
+            #171613 45%,
+            #080807 100%
+        );
+}
+
+body.lights-on .museum-content {
+    opacity: 1;
+}
+
+body.lights-on .light-switch span {
+    transform: translateY(40px);
+}
+
+body.lights-on .switch-label {
+    color: #c9c0ad;
+}
