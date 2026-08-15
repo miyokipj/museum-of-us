@@ -1,9 +1,8 @@
 /* ========================================
-   THE MUSEUM OF US
-   Elegant Museum + Developer Aesthetic
+   P&J
    ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap');
 
 
 /* ---------- PAGE ---------- */
@@ -12,18 +11,25 @@
     box-sizing: border-box;
 }
 
+html,
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
-    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
     background: #080807;
     color: #f3efe5;
     font-family: 'Inter', sans-serif;
+    transition: background 1.5s ease;
 }
 
 .museum {
-    min-height: 100vh;
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
 
 
@@ -33,79 +39,67 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    width: 160px;
     text-align: center;
-    z-index: 10;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    transition: opacity 0.8s ease;
 }
 
 .switch-plate {
     width: 100px;
     height: 160px;
-    background: #d8d2c5;
-    border-radius: 8px;
+    margin: 0 auto;
     padding: 15px;
+    background: #e1ddd3;
+    border-radius: 8px;
     box-shadow:
         0 8px 30px rgba(0, 0, 0, 0.7),
         inset 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .light-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 70px;
     height: 120px;
+    padding: 0;
     border: none;
     border-radius: 6px;
     background: #b9b2a5;
     cursor: pointer;
-    position: relative;
     box-shadow:
         inset 0 4px 8px rgba(255, 255, 255, 0.25),
         inset 0 -6px 10px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s ease;
-}
-
-.light-switch > span:not(.pixel-heart) {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 50px;
-    height: 70px;
-    border-radius: 5px;
-    background: #aaa396;
-    box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.35);
     transition: transform 0.2s ease;
 }
+
+.light-switch:active {
+    transform: translateY(4px);
+}
+
 
 /* ---------- PIXEL HEART ---------- */
 
 .pixel-heart {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 8px;
-    height: 8px;
-    background: #f2354f;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    box-shadow:
-        -8px -8px 0 #f2354f,
-         8px -8px 0 #f2354f,
-        -16px 0 0 #f2354f,
-         16px 0 0 #f2354f,
-        -8px 8px 0 #f2354f,
-         8px 8px 0 #f2354f,
-        -8px 16px 0 #f2354f,
-         8px 16px 0 #f2354f,
-         0 24px 0 #f2354f;
+    position: static;
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 0;
     image-rendering: pixelated;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.light-switch:active span {
-    transform: translateY(10px);
+    shape-rendering: crispEdges;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 .switch-label {
-    margin-top: 18px;
+    width: 100%;
+    margin: 18px 0 0;
+    text-align: center;
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     letter-spacing: 2px;
@@ -114,47 +108,49 @@ body {
 }
 
 
-/* ---------- MUSEUM CONTENT ---------- */
+/* ---------- MAIN CONTENT ---------- */
 
 .museum-content {
-    min-height: 100vh;
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.exhibition-number {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: #8f897d;
-    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1.5s ease;
 }
 
 h1 {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(70px, 12vw, 140px);
+    font-size: clamp(80px, 12vw, 140px);
     font-weight: 400;
-    letter-spacing: 8px;
+    line-height: 1;
+    letter-spacing: 4px;
     text-align: center;
 }
 
 .subtitle {
-    margin-top: 18px;
+    margin: 20px 0 0;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 2px;
     color: #bdb6a8;
+    text-align: center;
 }
-/* ---------- LIGHTS ON ---------- */
 
-.museum-content {
-    opacity: 0;
-    transition: opacity 1.5s ease;
+.anniversary {
+    margin: 26px 0 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #f3efe5;
+    text-align: center;
 }
+
+
+/* ---------- LIGHTS ON ---------- */
 
 body.lights-on {
     background:
@@ -170,19 +166,8 @@ body.lights-on .museum-content {
     opacity: 1;
 }
 
-body.lights-on .light-switch > span:not(.pixel-heart) {
-    transform: translateY(40px);
-}
 
-body.lights-on .switch-label {
-    color: #c9c0ad;
-}
-
-/* ---------- HIDE SWITCH AFTER LIGHTS TURN ON ---------- */
-
-.light-switch-area {
-    transition: opacity 0.8s ease;
-}
+/* ---------- HIDE SWITCH AFTER CLICK ---------- */
 
 body.lights-on .light-switch-area {
     opacity: 0;
