@@ -63,7 +63,7 @@ body {
     transition: all 0.2s ease;
 }
 
-.light-switch span {
+.light-switch > span:not(.pixel-heart) {
     position: absolute;
     left: 10px;
     top: 10px;
@@ -75,6 +75,7 @@ body {
         0 4px 8px rgba(0, 0, 0, 0.35);
     transition: transform 0.2s ease;
 }
+
 /* ---------- PIXEL HEART ---------- */
 
 .pixel-heart {
@@ -85,6 +86,7 @@ body {
     height: 8px;
     background: #f2354f;
     transform: translate(-50%, -50%);
+    z-index: 5;
     box-shadow:
         -8px -8px 0 #f2354f,
          8px -8px 0 #f2354f,
@@ -92,9 +94,9 @@ body {
          16px 0 0 #f2354f,
         -8px 8px 0 #f2354f,
          8px 8px 0 #f2354f,
-         0 16px 0 #f2354f,
         -8px 16px 0 #f2354f,
-         8px 16px 0 #f2354f;
+         8px 16px 0 #f2354f,
+         0 24px 0 #f2354f;
     image-rendering: pixelated;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -168,19 +170,21 @@ body.lights-on .museum-content {
     opacity: 1;
 }
 
-body.lights-on .light-switch span {
+body.lights-on .light-switch > span:not(.pixel-heart) {
     transform: translateY(40px);
-}
-
-body.lights-on .pixel-heart {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-}
-
-body.lights-on .switch-label {
-    opacity: 0;
 }
 
 body.lights-on .switch-label {
     color: #c9c0ad;
+}
+
+/* ---------- HIDE SWITCH AFTER LIGHTS TURN ON ---------- */
+
+.light-switch-area {
+    transition: opacity 0.8s ease;
+}
+
+body.lights-on .light-switch-area {
+    opacity: 0;
+    pointer-events: none;
 }
