@@ -124,13 +124,12 @@ body {
 
 h1 {
     margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(65px, 9vw, 110px);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(55px, 8vw, 90px);
     font-weight: 400;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     text-align: center;
 }
-
 .subtitle {
     margin: 20px 0 0;
     font-size: 16px;
