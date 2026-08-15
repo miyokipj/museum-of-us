@@ -1,0 +1,26 @@
+/* The Museum of Us */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    background-color: #11110f;
+    color: #f3efe5;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 25vh;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #c9c2b3;
+}
