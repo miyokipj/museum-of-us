@@ -125,10 +125,9 @@ body {
 h1 {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(80px, 12vw, 140px);
+    font-size: clamp(65px, 9vw, 110px);
     font-weight: 400;
-    line-height: 1;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     text-align: center;
 }
 
