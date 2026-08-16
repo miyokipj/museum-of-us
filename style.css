@@ -225,3 +225,18 @@ body.lights-on .light-switch-area {
     white-space: nowrap;
     text-shadow: 0 0 8px rgba(245, 234, 215, 0.25);
 }
+
+/* ---------- SCRAPBOOK NAVIGATION ---------- */
+
+.next-button {
+    margin-top: 25px;
+    color: #f5ead7;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 3px;
+    transition: opacity 0.3s ease;
+}
+
+.next-button:hover {
+    opacity: 0.6;
+}
