@@ -195,3 +195,20 @@ body.lights-on .light-switch-area {
     transform: translateY(-6px) scale(1.02);
     filter: brightness(1.05);
 }
+
+/* ---------- SCRAPBOOK PAGES ---------- */
+
+.scrapbook-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.scrapbook-page img {
+    display: block;
+    width: min(1100px, 85vw);
+    height: auto;
+}
