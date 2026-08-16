@@ -9,20 +9,17 @@ lightSwitch.addEventListener("click", function () {
 
 });
 
-// Find the scrapbook cover
-const scrapbookCover = document.getElementById("scrapbookCover");
-
-// Open the scrapbook when the cover is clicked
-scrapbookCover.addEventListener("click", function () {
-    window.location.href = "scrapbook.html";
-});
-
 // Find the envelope
 const envelope = document.getElementById("envelope");
 
-// Open the letter when the envelope is clicked
+// Fade into the letter when the envelope is clicked
 if (envelope) {
     envelope.addEventListener("click", function () {
-        window.location.href = "letter.html";
+        document.body.style.transition = "opacity 0.7s ease";
+        document.body.style.opacity = "0";
+
+        setTimeout(function () {
+            window.location.href = "letter.html";
+        }, 700);
     });
 }
