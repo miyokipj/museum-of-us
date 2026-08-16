@@ -240,3 +240,21 @@ body.lights-on .light-switch-area {
 .next-button:hover {
     opacity: 0.6;
 }
+
+/* ---------- ENVELOPE PAGE ---------- */
+
+.envelope-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #000;
+}
+
+.envelope-page img {
+    display: block;
+    width: min(850px, 75vw);
+    height: auto;
+}
