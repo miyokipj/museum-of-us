@@ -180,6 +180,19 @@ body.lights-on .light-switch-area {
     width: min(360px, 55vw);
     cursor: pointer;
     transition: transform 0.4s ease, filter 0.4s ease;
+    animation: coverEntrance 1s ease forwards;
+}
+
+@keyframes coverEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .scrapbook-cover img {
