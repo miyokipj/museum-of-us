@@ -212,3 +212,15 @@ body.lights-on .light-switch-area {
     width: min(1300px, 85vw);
     height: auto;
 }
+
+/* ---------- SWITCH LABEL ---------- */
+
+.switch-label {
+    color: #f5ead7;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 18px;
+    text-shadow: 0 0 8px rgba(245, 234, 215, 0.25);
+}
