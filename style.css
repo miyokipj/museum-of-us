@@ -209,6 +209,6 @@ body.lights-on .light-switch-area {
 
 .scrapbook-page img {
     display: block;
-    width: min(1200px, 85vw);
+    width: min(1300px, 85vw);
     height: auto;
 }
