@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P&J — Our Scrapbook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="scrapbook-page">
+
+        <img src="page3.png" alt="Scrapbook page">
+
+    </main>
+
+</body>
+</html>
