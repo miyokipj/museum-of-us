@@ -8,3 +8,11 @@ lightSwitch.addEventListener("click", function () {
     document.body.classList.toggle("lights-on");
 
 });
+
+// Find the scrapbook cover
+const scrapbookCover = document.getElementById("scrapbookCover");
+
+// Open the scrapbook when the cover is clicked
+scrapbookCover.addEventListener("click", function () {
+    window.location.href = "scrapbook.html";
+});
