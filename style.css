@@ -227,9 +227,9 @@ body.lights-on .light-switch-area {
 }
 
 /* ---------- SCRAPBOOK NAVIGATION ---------- */
-
 .next-button {
     margin-top: 25px;
+    margin-left: -40px;
     color: #f5ead7;
     text-decoration: none;
     font-size: 14px;
