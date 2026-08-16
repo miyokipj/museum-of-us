@@ -16,3 +16,13 @@ const scrapbookCover = document.getElementById("scrapbookCover");
 scrapbookCover.addEventListener("click", function () {
     window.location.href = "scrapbook.html";
 });
+
+// Find the envelope
+const envelope = document.getElementById("envelope");
+
+// Open the letter when the envelope is clicked
+if (envelope) {
+    envelope.addEventListener("click", function () {
+        window.location.href = "letter.html";
+    });
+}
