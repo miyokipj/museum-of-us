@@ -201,6 +201,7 @@ body.lights-on .light-switch-area {
 .scrapbook-page {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px;
@@ -229,7 +230,6 @@ body.lights-on .light-switch-area {
 /* ---------- SCRAPBOOK NAVIGATION ---------- */
 .next-button {
     margin-top: 25px;
-    margin-left: -40px;
     color: #f5ead7;
     text-decoration: none;
     font-size: 14px;
