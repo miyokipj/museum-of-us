@@ -258,3 +258,21 @@ body.lights-on .light-switch-area {
     width: min(850px, 75vw);
     height: auto;
 }
+
+/* ---------- LETTER PAGE ---------- */
+
+.letter-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #000;
+}
+
+.letter-page img {
+    display: block;
+    width: min(850px, 75vw);
+    height: auto;
+}
