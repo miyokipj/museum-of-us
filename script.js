@@ -15,7 +15,12 @@ const scrapbookCover = document.getElementById("scrapbookCover");
 // Open the scrapbook when the cover is clicked
 if (scrapbookCover) {
     scrapbookCover.addEventListener("click", function () {
-        window.location.href = "scrapbook.html";
+        document.body.style.transition = "opacity 0.7s ease";
+        document.body.style.opacity = "0";
+
+        setTimeout(function () {
+            window.location.href = "scrapbook.html";
+        }, 700);
     });
 }
 
