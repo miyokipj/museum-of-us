@@ -228,8 +228,17 @@ body.lights-on .light-switch-area {
 }
 
 /* ---------- SCRAPBOOK NAVIGATION ---------- */
-.next-button {
+
+.scrapbook-navigation {
+    width: min(1400px, 90vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 25px;
+}
+
+.back-button,
+.next-button {
     color: #f5ead7;
     text-decoration: none;
     font-size: 14px;
@@ -237,10 +246,10 @@ body.lights-on .light-switch-area {
     transition: opacity 0.3s ease;
 }
 
+.back-button:hover,
 .next-button:hover {
     opacity: 0.6;
 }
-
 /* ---------- ENVELOPE PAGE ---------- */
 
 .envelope-page {
